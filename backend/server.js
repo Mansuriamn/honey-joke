@@ -20,9 +20,7 @@ let jokesCache = {
 const CACHE_DURATION = 5 * 60 * 1000;
 
 app.use(express.json());
-app.use(cors({
-  origin: ['http://localhost:3000', 'https://pokemon-quey.onrender.com']
-}));
+app.use(cors());
 app.use(express.static(path.join(_dirname, "/frontend/dist")));
 
 // Create MySQL connection pool
